@@ -1,0 +1,21 @@
+# Installation of Mongo DB on windows
+
+- download the mongo installer from the following link
+- https://www.mongodb.com/try/download/community?tck=docs_server
+- Install the above download using the installer.
+- Create a folder called /data/db in the root folder or the C:/ drive.
+- windows installs Mongo as a service so start and stop Mongo manually
+  - open command prompt as administrator
+  - run the command net stop mongoDB
+  - this makes sure that mongo does not start automatically and we set the path for mongo.
+- To run Mongo as in Mac/Linux we need to update the path variables
+  - search for environment by pressing windows icon
+  - Environment variables button will appear in the bottom right, click on it
+  - double click on "Path"
+  - add the path to the installed folder as such `C:\Program Files\MongoDB\Server\5.0\bin` and save it
+- close all terminals and open a new terminal
+- type in mongo and now the installed version will be seen.
+- type in mongod --dbpath 'path to the data/db/ folder creted in root', needs to be set only once.
+- Keep this terminal running and minimize it, this is the running server.
+- open a new terminal and type on mongo.
+- MongoDB has now started.
